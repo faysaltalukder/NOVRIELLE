@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f4ee">
-  <meta name="description" content="Discover a considered edit of contemporary fashion and everyday essentials at NOVRIELLE. A modern fashion and lifestyle destination.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fff">
+  <meta name="description" content="Shop the NOVRIELLE edit of contemporary clothing, everyday essentials and lifestyle accessories. Discover the new season collection.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="NOVRIELLE — Wear Your Own Story">
-  <meta property="og:description" content="A considered edit of modern fashion, thoughtful details and everyday style.">
-  <title>NOVRIELLE — Wear Your Own Story</title>
+  <meta property="og:title" content="NOVRIELLE | Fashion & Lifestyle">
+  <meta property="og:description" content="A considered edit of fashion and lifestyle. Wear your own story.">
+  <title>NOVRIELLE | Fashion & Lifestyle</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
   <script src="./app.js" defer></script>
@@ -16,358 +16,254 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="announcement">
-    <div class="announcement__inner">
-      <span class="announcement__side">A NEW POINT OF VIEW ON EVERYDAY STYLE</span>
-      <span class="announcement__center">The first NOVRIELLE edit is taking shape <span aria-hidden="true">✦</span></span>
-      <span class="announcement__side announcement__right">BANGLADESH · ONLINE PREVIEW</span>
+  <div class="top-announcement">
+    <div class="page-container top-announcement__inner">
+      <span>THE NEW SEASON EDIT · 2026</span>
+      <span class="top-announcement__center">A NEW POINT OF VIEW ON EVERYDAY STYLE</span>
+      <span class="top-announcement__right">WELCOME TO NOVRIELLE</span>
     </div>
   </div>
 
-  <header class="site-header" id="top">
-    <div class="header-main page-shell">
-      <button class="icon-button mobile-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  <header class="site-header">
+    <div class="page-container header-main">
+      <button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
 
       <a class="brand" href="#top" aria-label="NOVRIELLE home">
-        <span class="brand__word">NOVRIELLE</span>
-        <span class="brand__sub">A MODERN FASHION HOUSE</span>
+        <span class="brand__name">NOVRIELLE</span>
+        <span class="brand__tagline">FASHION · LIFESTYLE · YOU</span>
       </a>
 
-      <form class="search-box" id="search-form" role="search">
-        <label class="sr-only" for="site-search">Search the collection</label>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
-        <input id="site-search" type="search" placeholder="Search the collection..." autocomplete="off">
+      <form class="header-search" id="search-form" role="search">
+        <label class="sr-only" for="site-search">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search for products, categories and more..." autocomplete="off">
+        <button type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.6 4.6"/></svg>
+        </button>
         <button class="search-clear" id="search-clear" type="button" aria-label="Clear search" hidden>×</button>
       </form>
 
-      <div class="header-actions">
-        <button class="icon-button account-button" type="button" data-action="account" aria-label="Account">
+      <div class="header-utility">
+        <button type="button" class="utility-link" data-open="account">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.8-3.6 3.4-5.5 7.5-5.5s6.7 1.9 7.5 5.5"/></svg>
-          <span class="action-label">Account</span>
+          <span>Account</span>
         </button>
-        <button class="icon-button" type="button" data-action="wishlist" aria-label="Open wishlist">
+        <button type="button" class="utility-link" data-open="wishlist">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 5.8a5 5 0 0 0-7.1 0L12 7.1l-1.3-1.3a5 5 0 0 0-7.1 7.1l1.3 1.3L12 21l7.1-6.8 1.3-1.3a5 5 0 0 0 0-7.1Z"/></svg>
-          <span class="action-label">Wishlist</span>
-          <span class="action-count" id="wishlist-count">0</span>
+          <span>Wishlist</span><b id="wishlist-count">0</b>
         </button>
-        <button class="icon-button bag-button" type="button" data-action="cart" aria-label="Open shopping bag">
+        <button type="button" class="utility-link" data-open="cart">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
-          <span class="action-label">Bag</span>
-          <span class="action-count" id="cart-count">0</span>
+          <span>Cart</span><b id="cart-count">0</b>
         </button>
       </div>
     </div>
 
-    <nav class="desktop-nav page-shell" aria-label="Main navigation">
-      <a href="#new-in" data-nav="all">New In</a>
-      <a href="#women" data-nav="women">Women</a>
-      <a href="#men" data-nav="men">Men</a>
-      <a href="#kids" data-nav="kids">Kids</a>
-      <a href="#collections">The Edit</a>
-      <a href="#story">Our Story</a>
-      <a class="nav-sale" href="#shop">Explore All</a>
+    <nav class="main-navigation" aria-label="Main navigation">
+      <div class="page-container nav-inner">
+        <a href="#top" class="nav-home is-current">Home</a>
+        <button type="button" class="nav-category-toggle" id="category-toggle" aria-expanded="false" aria-controls="mega-menu">
+          Shop by Category <span>⌄</span>
+        </button>
+        <a href="#new-collection">New Collection</a>
+        <a href="#mens">Mens</a>
+        <a href="#womens">Womens</a>
+        <a href="#kids">Kids</a>
+        <a href="#accessories">Lifestyle Accessories</a>
+        <a href="#trending">Trending Now</a>
+        <a href="#new-collection" class="nav-deals">Best Deals</a>
+      </div>
+      <div class="mega-menu" id="mega-menu" hidden>
+        <div class="page-container mega-menu__grid">
+          <div><h3>Women</h3><a href="#womens">Women's Top Wear</a><a href="#womens">Dresses & Tunics</a><a href="#womens">Ethnic & Occasion</a><a href="#womens">Outerwear</a></div>
+          <div><h3>Men</h3><a href="#mens">Panjabi & Kurta</a><a href="#mens">Shirts & Polos</a><a href="#mens">Casual Wear</a><a href="#mens">Jackets</a></div>
+          <div><h3>Kids</h3><a href="#kids">Girls Collection</a><a href="#kids">Boys Collection</a><a href="#kids">Everyday Sets</a><a href="#kids">Occasion Wear</a></div>
+          <div><h3>Accessories</h3><a href="#accessories">Wallets</a><a href="#accessories">Belts</a><a href="#accessories">Caps</a><a href="#accessories">Everyday Essentials</a></div>
+        </div>
+      </div>
     </nav>
 
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="#new-in" data-nav="all">New In</a>
-      <a href="#women" data-nav="women">Women</a>
-      <a href="#men" data-nav="men">Men</a>
-      <a href="#kids" data-nav="kids">Kids</a>
-      <a href="#collections">The Edit</a>
-      <a href="#story">Our Story</a>
-      <a href="#shop">Explore All</a>
+    <nav class="mobile-navigation" id="mobile-navigation" hidden aria-label="Mobile navigation">
+      <a href="#top">Home</a><a href="#new-collection">New Collection</a><a href="#mens">Mens</a><a href="#womens">Womens</a><a href="#kids">Kids</a><a href="#accessories">Lifestyle Accessories</a><a href="#trending">Trending Now</a><a href="#new-collection">Best Deals</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero page-shell" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span> THE NOVRIELLE POINT OF VIEW</p>
-        <h1 id="hero-title">Make room<br>for <em>your</em> kind<br>of style.</h1>
-        <p class="hero-description">Thoughtful pieces. Modern silhouettes. A little more you in everything you wear.</p>
-        <div class="hero-cta-row">
-          <a class="button button--dark" href="#new-in">Discover the edit <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#collections">Our latest stories <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="hero-note"><span class="hero-note__star">✳</span><span>STYLE, WITHOUT THE NOISE.</span></div>
-      </div>
-
-      <div class="hero-art" aria-label="A preview of the NOVRIELLE collection">
-        <div class="hero-art__main">
-          <img src="./assets/images/products/women-floral-day-dress.png" alt="Model wearing a floral day dress" fetchpriority="high">
-          <span class="image-index">01 / THE EDIT</span>
-        </div>
-        <div class="hero-art__side">
-          <div class="hero-art__small hero-art__small--top">
-            <img src="./assets/images/products/men-heritage-kurta.jpeg" alt="A contemporary men's heritage kurta" loading="eager">
-            <span>FORM, REFINED.</span>
+    <section class="hero-section page-container" id="top" aria-label="Featured collections">
+      <div class="hero-slider" id="hero-slider">
+        <article class="hero-slide is-active" data-slide="0">
+          <img src="./assets/images/products/women-ethnic-occasion-set.jpeg" alt="Women's occasion wear from the NOVRIELLE edit" fetchpriority="high">
+          <div class="hero-slide__shade"></div>
+          <div class="hero-slide__copy">
+            <span class="hero-kicker">FESTIVE EDIT · 2026</span>
+            <h1>Make every<br><em>moment</em> yours.</h1>
+            <p>Discover the season's most expressive looks, thoughtfully brought together.</p>
+            <a href="#new-collection" class="hero-button">EXPLORE COLLECTION <span>→</span></a>
           </div>
-          <div class="hero-art__small hero-art__small--bottom">
-            <img src="./assets/images/products/women-sage-gathered-top.png" alt="Sage gathered top from the collection" loading="eager">
-            <span>SOFT BY DESIGN.</span>
+          <span class="hero-slide__side-note">NOVRIELLE · THE NEW SEASON</span>
+        </article>
+        <article class="hero-slide" data-slide="1">
+          <img src="./assets/images/products/men-plum-kurta.jpeg" alt="Men's kurta from the NOVRIELLE collection" loading="lazy">
+          <div class="hero-slide__shade"></div>
+          <div class="hero-slide__copy">
+            <span class="hero-kicker">THE HERITAGE COLLECTION</span>
+            <h2>Tradition with<br><em>a new rhythm.</em></h2>
+            <p>Familiar forms, considered details and modern everyday expression.</p>
+            <a href="#mens" class="hero-button">SHOP MEN <span>→</span></a>
           </div>
-        </div>
-        <div class="hero-stamp"><span>NEW</span><strong>SEASON</strong><span>2026 · 01</span></div>
-      </div>
-    </section>
-
-    <section class="trust-strip" aria-label="NOVRIELLE values">
-      <div class="page-shell trust-strip__inner">
-        <span><i>✳</i> Thoughtful curation</span>
-        <span><i>✳</i> Everyday expression</span>
-        <span><i>✳</i> Made for your rhythm</span>
-        <span><i>✳</i> A fresh point of view</span>
-      </div>
-    </section>
-
-    <section class="section page-shell categories-section" id="collections">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">FIND YOUR EVERYDAY</p>
-          <h2>Shop by <em>mood.</em></h2>
-        </div>
-        <p class="section-intro">A considered starting point for whatever today looks like.</p>
-      </div>
-      <div class="category-grid">
-        <a class="category-card category-card--women" href="#women" data-category-link="women">
-          <img src="./assets/images/products/women-ivory-piped-shirt.png" alt="Women's contemporary style" loading="lazy">
-          <span class="category-card__number">01</span>
-          <span class="category-card__label">Women <b>↗</b></span>
-          <span class="category-card__sub">A little more you</span>
-        </a>
-        <a class="category-card category-card--men" href="#men" data-category-link="men">
-          <img src="./assets/images/products/men-crimson-kurta.jpeg" alt="Men's contemporary style" loading="lazy">
-          <span class="category-card__number">02</span>
-          <span class="category-card__label">Men <b>↗</b></span>
-          <span class="category-card__sub">Quiet confidence</span>
-        </a>
-        <a class="category-card category-card--kids" href="#kids" data-category-link="kids">
-          <img src="./assets/images/products/kids-weekend-set.jpeg" alt="Kids' everyday style" loading="lazy">
-          <span class="category-card__number">03</span>
-          <span class="category-card__label">Kids <b>↗</b></span>
-          <span class="category-card__sub">Made for little moments</span>
-        </a>
-        <a class="category-card category-card--edit" href="#new-in">
-          <img src="./assets/images/products/women-rose-utility-jacket.png" alt="A modern rose utility jacket" loading="lazy">
-          <span class="category-card__number">04</span>
-          <span class="category-card__label">The Edit <b>↗</b></span>
-          <span class="category-card__sub">Pieces with a point of view</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section section--tinted" id="new-in">
-      <div class="page-shell">
-        <div class="section-heading section-heading--center">
-          <div>
-            <p class="eyebrow">A FIRST LOOK</p>
-            <h2>New to the <em>story.</em></h2>
+          <span class="hero-slide__side-note">NOVRIELLE · THE NEW SEASON</span>
+        </article>
+        <article class="hero-slide" data-slide="2">
+          <img src="./assets/images/products/women-floral-day-dress.png" alt="Floral women's dress from the collection" loading="lazy">
+          <div class="hero-slide__shade"></div>
+          <div class="hero-slide__copy">
+            <span class="hero-kicker">NEW COLLECTION · N/01</span>
+            <h2>Find your<br><em>own kind</em> of style.</h2>
+            <p>Easy silhouettes and standout pieces for the many versions of you.</p>
+            <a href="#womens" class="hero-button">DISCOVER WOMEN <span>→</span></a>
           </div>
-          <p class="section-intro">A preview of the pieces and perspectives shaping our first collection.</p>
-        </div>
-        <div class="product-toolbar">
-          <div class="filter-pills" role="group" aria-label="Filter preview products">
-            <button class="filter-pill is-active" type="button" data-filter="all" aria-pressed="true">All pieces</button>
-            <button class="filter-pill" type="button" data-filter="women" aria-pressed="false">Women</button>
-            <button class="filter-pill" type="button" data-filter="men" aria-pressed="false">Men</button>
-            <button class="filter-pill" type="button" data-filter="kids" aria-pressed="false">Kids</button>
-          </div>
-          <span class="catalogue-status"><span></span> COLLECTION PREVIEW</span>
-        </div>
-        <div class="product-grid" id="product-grid" aria-live="polite"></div>
-        <div class="center-action">
-          <a href="#shop" class="button button--outline">Explore all pieces <span aria-hidden="true">↗</span></a>
+          <span class="hero-slide__side-note">NOVRIELLE · THE NEW SEASON</span>
+        </article>
+        <button class="hero-arrow hero-arrow--prev" type="button" id="hero-prev" aria-label="Previous campaign">‹</button>
+        <button class="hero-arrow hero-arrow--next" type="button" id="hero-next" aria-label="Next campaign">›</button>
+        <div class="hero-dots" id="hero-dots" aria-label="Choose campaign">
+          <button class="is-active" type="button" data-slide-to="0" aria-label="Campaign 1"></button>
+          <button type="button" data-slide-to="1" aria-label="Campaign 2"></button>
+          <button type="button" data-slide-to="2" aria-label="Campaign 3"></button>
         </div>
       </div>
     </section>
 
-    <section class="campaign-band page-shell" aria-labelledby="campaign-title">
-      <div class="campaign-image">
-        <img src="./assets/images/products/women-rose-utility-jacket.png" alt="Rose-toned outerwear from the winter edit" loading="lazy">
-        <span class="campaign-image__caption">A STUDY IN LAYERS · 2026</span>
+    <section class="section-block page-container popular-section" id="popular-categories">
+      <div class="section-title-row">
+        <div><span class="section-kicker">EXPLORE THE NOVRIELLE WORLD</span><h2>Popular Categories</h2></div>
+        <a class="see-more-link" href="#new-collection">View all categories <span>→</span></a>
       </div>
-      <div class="campaign-copy">
-        <p class="eyebrow">THE ART OF LAYERING</p>
-        <h2 id="campaign-title">A softer take<br>on <em>the season.</em></h2>
-        <p>Easy layers and considered shapes, made to move with the day. Explore a first look at the outerwear edit.</p>
-        <a class="text-link text-link--dark" href="#women">Explore the edit <span aria-hidden="true">→</span></a>
-        <div class="campaign-signature">N / 01</div>
-      </div>
-    </section>
-
-    <section class="section page-shell" id="shop">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">THE COLLECTION PREVIEW</p>
-          <h2>Pieces to <em>come back to.</em></h2>
-        </div>
-        <p class="section-intro">Explore the first selection from the NOVRIELLE image library.</p>
-      </div>
-      <div class="collection-tabs" role="tablist" aria-label="Shop collection">
-        <button class="collection-tab is-active" type="button" role="tab" aria-selected="true" data-collection="all">All</button>
-        <button class="collection-tab" type="button" role="tab" aria-selected="false" data-collection="women">Women</button>
-        <button class="collection-tab" type="button" role="tab" aria-selected="false" data-collection="men">Men</button>
-        <button class="collection-tab" type="button" role="tab" aria-selected="false" data-collection="kids">Kids</button>
-      </div>
-      <div class="product-grid product-grid--shop" id="shop-grid" aria-live="polite"></div>
-    </section>
-
-    <section class="editorial-row page-shell" id="story">
-      <div class="editorial-card editorial-card--large">
-        <img src="./assets/images/products/women-sky-tie-blouse.png" alt="A sky-blue tie blouse from the collection" loading="lazy">
-        <div class="editorial-card__overlay">
-          <span class="eyebrow">THE DETAILS MATTER</span>
-          <h2>Less, but<br><em>considered.</em></h2>
-          <a href="#new-in" class="button button--light">Explore the details <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-      <div class="editorial-copy">
-        <p class="eyebrow">A NOTE FROM NOVRIELLE</p>
-        <h2>Style is personal.<br><em>Keep it that way.</em></h2>
-        <p>NOVRIELLE is being built around a simple idea: getting dressed should feel like an expression, not an instruction. A thoughtful edit of everyday pieces, considered details and room to make them your own.</p>
-        <a class="text-link text-link--dark" href="#footer">More about the brand <span aria-hidden="true">→</span></a>
-        <div class="editorial-monogram">N.</div>
+      <div class="popular-grid">
+        <a href="#womens" class="popular-card"><img src="./assets/images/products/women-ivory-piped-shirt.png" alt="Women's collection" loading="lazy"><span>WOMENS</span></a>
+        <a href="#mens" class="popular-card"><img src="./assets/images/products/men-sky-polo.png" alt="Men's collection" loading="lazy"><span>MENS</span></a>
+        <a href="#kids" class="popular-card"><img src="./assets/images/products/kids-floral-party-dress.jpeg" alt="Kids collection" loading="lazy"><span>KIDS</span></a>
+        <a href="#mens" class="popular-card"><img src="./assets/images/products/men-heritage-kurta.jpeg" alt="Panjabi collection" loading="lazy"><span>PANJABI</span></a>
+        <a href="#accessories" class="popular-card"><img src="./assets/images/products/accessory-black-leather-wallet.jpeg" alt="Lifestyle accessories" loading="lazy"><span>ACCESSORIES</span></a>
+        <a href="#new-collection" class="popular-card"><img src="./assets/images/products/women-coral-utility-jacket.png" alt="New season edit" loading="lazy"><span>NEW SEASON</span></a>
       </div>
     </section>
 
-    <section class="section section--tinted category-feature" id="women">
-      <div class="page-shell category-feature__inner">
-        <div class="category-feature__copy">
-          <p class="eyebrow">01 / WOMEN</p>
-          <h2>Expressive<br>by <em>nature.</em></h2>
-          <p>Soft structure, easy layers and thoughtful details for the many versions of you.</p>
-          <a href="#shop" class="button button--dark" data-filter-link="women">Explore women's edit <span aria-hidden="true">↗</span></a>
+    <section class="campaign-grid-section page-container" aria-label="Shop featured collections">
+      <a class="campaign-tile campaign-tile--wide" href="#womens">
+        <img src="./assets/images/products/women-cobalt-embroidered-tunic.png" alt="Women's exclusive collection" loading="lazy">
+        <span class="campaign-tile__veil"></span>
+        <span class="campaign-tile__copy"><small>THE SEASON'S SIGNATURE</small><strong>EXCLUSIVE<br>COLLECTION</strong><b>DISCOVER MORE ↗</b></span>
+      </a>
+      <a class="campaign-tile" href="#mens">
+        <img src="./assets/images/products/men-crimson-kurta.jpeg" alt="Men's collection" loading="lazy">
+        <span class="campaign-tile__veil"></span><span class="campaign-tile__copy"><small>01 / MENS</small><strong>MEN'S<br>COLLECTION</strong><b>SHOP NOW ↗</b></span>
+      </a>
+      <a class="campaign-tile" href="#womens">
+        <img src="./assets/images/products/women-noir-midi-dress.png" alt="Women's collection" loading="lazy">
+        <span class="campaign-tile__veil"></span><span class="campaign-tile__copy"><small>02 / WOMENS</small><strong>WOMEN'S<br>COLLECTION</strong><b>SHOP NOW ↗</b></span>
+      </a>
+      <a class="campaign-tile" href="#kids">
+        <img src="./assets/images/products/kids-weekend-set.jpeg" alt="Kids collection" loading="lazy">
+        <span class="campaign-tile__veil"></span><span class="campaign-tile__copy"><small>03 / KIDS</small><strong>KIDS'<br>COLLECTION</strong><b>SHOP NOW ↗</b></span>
+      </a>
+      <a class="campaign-tile" href="#accessories">
+        <img src="./assets/images/products/accessory-brown-long-wallet.jpeg" alt="Accessories collection" loading="lazy">
+        <span class="campaign-tile__veil"></span><span class="campaign-tile__copy"><small>THE FINISHING TOUCH</small><strong>GIFT &<br>ACCESSORIES</strong><b>EXPLORE ↗</b></span>
+      </a>
+    </section>
+
+    <section class="section-block page-container" id="new-collection">
+      <div class="section-title-row">
+        <div><span class="section-kicker">JUST ARRIVED IN OUR EDIT</span><h2>New Collection</h2></div>
+        <a class="see-more-link" href="#new-collection">See more <span>→</span></a>
+      </div>
+      <div class="product-grid product-grid--dense" id="new-products" aria-live="polite"></div>
+    </section>
+
+    <section class="mid-banners page-container" aria-label="Featured edits">
+      <a href="#mens" class="mid-banner"><img src="./assets/images/products/men-ivory-kurta.jpeg" alt="Men's heritage wear" loading="lazy"><span><small>THE HERITAGE EDIT</small><strong>Made for<br>your moments.</strong><b>EXPLORE MENS ↗</b></span></a>
+      <a href="#womens" class="mid-banner"><img src="./assets/images/products/women-ethnic-occasion-set.jpeg" alt="Women's occasion edit" loading="lazy"><span><small>OCCASION WEAR</small><strong>Dress the<br>feeling.</strong><b>EXPLORE WOMENS ↗</b></span></a>
+      <a href="#kids" class="mid-banner"><img src="./assets/images/products/kids-indigo-kurta.jpeg" alt="Kids' occasion wear" loading="lazy"><span><small>LITTLE CELEBRATIONS</small><strong>Big days,<br>little looks.</strong><b>EXPLORE KIDS ↗</b></span></a>
+    </section>
+
+    <section class="section-block section-block--soft" id="trending">
+      <div class="page-container">
+        <div class="section-title-row">
+          <div><span class="section-kicker">WHAT'S MOVING RIGHT NOW</span><h2>Trending Now</h2></div>
+          <a class="see-more-link" href="#trending">See all trending <span>→</span></a>
         </div>
-        <div class="category-feature__image">
-          <img src="./assets/images/products/women-noir-embroidered-top.jpeg" alt="Black embroidered top from the women's edit" loading="lazy">
-          <span>THE EVERYDAY EDIT</span>
+        <div class="shelf-tabs" role="tablist" aria-label="Trending product categories">
+          <button type="button" class="is-active" data-shelf="panjabi" role="tab" aria-selected="true">Panjabi</button>
+          <button type="button" data-shelf="ethnic" role="tab" aria-selected="false">Ethnic Wear</button>
+          <button type="button" data-shelf="menswear" role="tab" aria-selected="false">Mens Top Wear</button>
+          <button type="button" data-shelf="womenswear" role="tab" aria-selected="false">Womens Top Wear</button>
         </div>
-        <div class="category-feature__side">
-          <img src="./assets/images/products/women-ivory-wrap-top.jpeg" alt="Ivory wrap top" loading="lazy">
-          <p>Details that stay with you.</p>
-        </div>
+        <div class="product-grid product-grid--dense" id="trending-products" aria-live="polite"></div>
+        <div class="section-bottom-action"><a class="see-more-button" href="#new-collection">See More <span id="trending-see-label">Panjabi</span> Products</a></div>
       </div>
     </section>
 
-    <section class="section page-shell category-feature category-feature--men" id="men">
-      <div class="category-feature__inner">
-        <div class="category-feature__copy">
-          <p class="eyebrow">02 / MEN</p>
-          <h2>Quietly<br><em>confident.</em></h2>
-          <p>Modern essentials and familiar forms with a fresh perspective.</p>
-          <a href="#shop" class="button button--dark" data-filter-link="men">Explore men's edit <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="category-feature__image">
-          <img src="./assets/images/products/men-heritage-kurta.jpeg" alt="Men's heritage kurta" loading="lazy">
-          <span>FORM, REFINED.</span>
-        </div>
-        <div class="category-feature__side">
-          <img src="./assets/images/products/men-crimson-zip-jacket.jpeg" alt="Crimson casual jacket" loading="lazy">
-          <p>Made to move with your day.</p>
-        </div>
+    <section class="section-block page-container" id="accessories">
+      <div class="section-title-row">
+        <div><span class="section-kicker">THE DETAILS THAT COMPLETE THE LOOK</span><h2>Lifestyle Accessories</h2></div>
+        <a class="see-more-link" href="#accessories">See more <span>→</span></a>
       </div>
+      <div class="shelf-tabs" role="tablist" aria-label="Accessory categories">
+        <button type="button" class="is-active" data-accessory="wallets" role="tab" aria-selected="true">Mens Wallet</button>
+        <button type="button" data-accessory="belts" role="tab" aria-selected="false">Mens Belt</button>
+        <button type="button" data-accessory="caps" role="tab" aria-selected="false">Caps</button>
+        <button type="button" data-accessory="all" role="tab" aria-selected="false">All Accessories</button>
+      </div>
+      <div class="product-grid product-grid--dense" id="accessory-products" aria-live="polite"></div>
+      <div class="section-bottom-action"><a class="see-more-button" href="#accessories">See More <span id="accessory-see-label">Mens Wallet</span> Products</a></div>
     </section>
 
-    <section class="section section--tinted category-feature" id="kids">
-      <div class="page-shell category-feature__inner">
-        <div class="category-feature__copy">
-          <p class="eyebrow">03 / KIDS</p>
-          <h2>Little looks.<br><em>Big days.</em></h2>
-          <p>Comfortable, playful pieces for everyday discoveries and little milestones.</p>
-          <a href="#shop" class="button button--dark" data-filter-link="kids">Explore kids' edit <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="category-feature__image">
-          <img src="./assets/images/products/kids-weekend-set.jpeg" alt="Kids' coordinated casual outfits" loading="lazy">
-          <span>MADE FOR LITTLE MOMENTS</span>
-        </div>
-        <div class="category-feature__side">
-          <img src="./assets/images/products/baby-blush-dress.jpeg" alt="Blush dress for a little one" loading="lazy">
-          <p>Everyday comfort, always.</p>
-        </div>
+    <section class="marketplace-banner page-container">
+      <div class="marketplace-banner__image"><img src="./assets/images/products/women-floral-day-dress.png" alt="NOVRIELLE fashion selection" loading="lazy"></div>
+      <div class="marketplace-banner__copy">
+        <span class="section-kicker">THE NOVRIELLE EDIT</span>
+        <h2>Find your next<br><em>favourite.</em></h2>
+        <p>Explore a growing selection of contemporary fashion, everyday essentials and details worth keeping.</p>
+        <a class="dark-button" href="#new-collection">SHOP THE COLLECTION <span>↗</span></a>
       </div>
-    </section>
-
-    <section class="service-notes page-shell" aria-label="Our service principles">
-      <div class="service-note"><span class="service-note__icon">✳</span><h3>Thoughtful selection</h3><p>A focused edit, chosen with intention.</p></div>
-      <div class="service-note"><span class="service-note__icon">⌂</span><h3>Made for real life</h3><p>Style that moves at your pace.</p></div>
-      <div class="service-note"><span class="service-note__icon">♡</span><h3>Here to help</h3><p>Customer care details coming soon.</p></div>
-    </section>
-
-    <section class="newsletter-section">
-      <div class="page-shell newsletter-inner">
-        <div>
-          <p class="eyebrow">STAY IN THE KNOW</p>
-          <h2>A little note<br>from <em>us to you.</em></h2>
-          <p>Be among the first to hear when the NOVRIELLE collection opens.</p>
-        </div>
-        <form class="newsletter-form" id="newsletter-form">
-          <label for="newsletter-email">Your email address</label>
-          <div class="newsletter-input-row">
-            <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required>
-            <button type="submit" aria-label="Join the NOVRIELLE mailing list">Join <span aria-hidden="true">↗</span></button>
-          </div>
-          <p class="form-note" id="newsletter-note">Preview only. Signup details stay in this browser and are not sent to a mailing service yet.</p>
-        </form>
-      </div>
+      <div class="marketplace-banner__stamp">N<br><small>STYLE<br>YOUR WAY</small></div>
     </section>
   </main>
 
   <footer class="site-footer" id="footer">
-    <div class="page-shell footer-main">
-      <div class="footer-brand-column">
-        <a class="brand brand--footer" href="#top">
-          <span class="brand__word">NOVRIELLE</span>
-          <span class="brand__sub">A MODERN FASHION HOUSE</span>
-        </a>
-        <p>Wear your own story.<br>A new point of view on everyday style.</p>
-        <div class="social-links" aria-label="Social links">
-          <span>Instagram</span><span>Facebook</span><span>Pinterest</span>
-        </div>
+    <div class="page-container footer-top">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="#top"><span class="brand__name">NOVRIELLE</span><span class="brand__tagline">FASHION · LIFESTYLE · YOU</span></a>
+        <p>Wear your own story.<br>Discover a considered edit of fashion and everyday style.</p>
+        <div class="footer-social"><a href="#footer">Instagram</a><a href="#footer">Facebook</a><a href="#footer">Pinterest</a></div>
       </div>
-      <div class="footer-column"><h3>Explore</h3><a href="#new-in">New In</a><a href="#women">Women</a><a href="#men">Men</a><a href="#kids">Kids</a><a href="#collections">The Edit</a></div>
-      <div class="footer-column"><h3>About</h3><a href="#story">Our Story</a><a href="#story">Our Approach</a><a href="#footer">Contact details coming soon</a></div>
-      <div class="footer-column"><h3>Customer care</h3><span>Shipping information — coming soon</span><span>Returns & exchanges — coming soon</span><span>FAQs — coming soon</span><span>Privacy policy — to be published</span></div>
-      <div class="footer-column footer-contact"><h3>Get in touch</h3><p>Official contact information will be added before launch.</p><a href="#newsletter-form">Join our mailing list ↗</a></div>
+      <div class="footer-column"><h3>Company</h3><a href="#footer">About NOVRIELLE</a><a href="#footer">Our Story</a><a href="#footer">Journal</a><a href="#footer">Contact Us</a></div>
+      <div class="footer-column"><h3>Customer</h3><a href="#footer">Login / Register</a><a href="#new-collection">New Collection</a><a href="#trending">Trending Now</a><a href="#accessories">Accessories</a></div>
+      <div class="footer-column"><h3>Help</h3><a href="#footer">FAQs — coming soon</a><a href="#footer">Shipping Policy — coming soon</a><a href="#footer">Returns Policy — coming soon</a><a href="#footer">Privacy Policy — coming soon</a><a href="#footer">Terms — coming soon</a></div>
+      <div class="footer-column footer-contact"><h3>Contact Us</h3><p>Official customer-care details will be published before orders open.</p><a href="#footer">Customer support information ↗</a></div>
     </div>
-    <div class="page-shell footer-bottom">
-      <span>© <span id="current-year">2026</span> NOVRIELLE. All rights reserved.</span>
-      <span class="footer-preview">COLLECTION PREVIEW · NOT YET OPEN FOR ORDERS</span>
-      <a href="#top">Back to top ↑</a>
+    <div class="footer-bottom">
+      <div class="page-container footer-bottom__inner"><span>© <span id="current-year">2026</span> NOVRIELLE. All Rights Reserved.</span><span class="footer-preview">COLLECTION PREVIEW · ORDERS NOT YET OPEN</span><a href="#top">Back to Top ↑</a></div>
     </div>
   </footer>
 
   <div class="overlay" id="overlay" hidden></div>
-
-  <aside class="drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
-    <div class="drawer-header">
-      <div><p class="eyebrow">YOUR SELECTION</p><h2 id="cart-title">Your bag <span id="drawer-cart-count">(0)</span></h2></div>
-      <button class="icon-button drawer-close" type="button" data-close-drawer aria-label="Close bag">×</button>
-    </div>
-    <div class="drawer-content" id="cart-items"></div>
-    <div class="drawer-footer">
-      <div class="drawer-total"><span>Order total</span><strong>To be confirmed</strong></div>
-      <button class="button button--dark button--full" type="button" id="preview-checkout">Continue to checkout</button>
-      <p class="drawer-disclaimer">This is a storefront preview. Prices, stock and secure order processing will be enabled after the official catalogue and backend are connected.</p>
-    </div>
+  <aside class="drawer" id="cart-drawer" aria-hidden="true" aria-labelledby="cart-title">
+    <div class="drawer-head"><div><small>YOUR SELECTION</small><h2 id="cart-title">Shopping Cart <span id="drawer-cart-count">(0)</span></h2></div><button type="button" class="drawer-close" data-close aria-label="Close cart">×</button></div>
+    <div class="drawer-body" id="cart-items"></div>
+    <div class="drawer-foot"><p>Product pricing, stock and delivery details will be confirmed when the official catalogue is published.</p><button type="button" class="dark-button dark-button--full" id="checkout-preview">Proceed to Checkout</button><small>This preview bag is saved only in this browser. It does not submit a real order.</small></div>
   </aside>
-
-  <aside class="drawer" id="wishlist-drawer" aria-labelledby="wishlist-title" aria-hidden="true">
-    <div class="drawer-header">
-      <div><p class="eyebrow">SAVED FOR LATER</p><h2 id="wishlist-title">Your wishlist <span id="drawer-wishlist-count">(0)</span></h2></div>
-      <button class="icon-button drawer-close" type="button" data-close-drawer aria-label="Close wishlist">×</button>
-    </div>
-    <div class="drawer-content" id="wishlist-items"></div>
+  <aside class="drawer" id="wishlist-drawer" aria-hidden="true" aria-labelledby="wishlist-title">
+    <div class="drawer-head"><div><small>SAVED FOR LATER</small><h2 id="wishlist-title">My Wishlist <span id="drawer-wishlist-count">(0)</span></h2></div><button type="button" class="drawer-close" data-close aria-label="Close wishlist">×</button></div>
+    <div class="drawer-body" id="wishlist-items"></div>
   </aside>
-
-  <div class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-product-title" aria-hidden="true">
-    <button class="icon-button modal-close" type="button" data-close-modal aria-label="Close product details">×</button>
+  <div class="product-modal" id="product-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-product-title">
+    <button type="button" class="modal-close" data-modal-close aria-label="Close product details">×</button>
     <div id="modal-product-content"></div>
   </div>
-
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <noscript><div class="noscript-message">NOVRIELLE's collection preview needs JavaScript to display the product catalogue and shopping interactions.</div></noscript>
+  <noscript><div class="noscript-alert">Please enable JavaScript to view NOVRIELLE's product collections.</div></noscript>
 </body>
 </html>
