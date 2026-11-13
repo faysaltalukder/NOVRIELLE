@@ -2,7 +2,7 @@
 
 **Repository:** `faysaltalukder/NOVRIELLE`  
 **Reference:** SaRa Lifestyle homepage currently open in the user's selected browser tab  
-**Project status:** Planning baseline; implementation has not started  
+**Project status:** Storefront prototype implemented in GitHub; production deployment and commerce backend remain pending  
 **Working brand line:** Fashion & Lifestyle  
 **Primary market assumption:** Bangladesh, with BDT pricing and local delivery workflows
 
@@ -577,3 +577,28 @@ The first coding pass should not attempt to build every feature at once. It shou
 10. Complete SEO, accessibility, responsive, security and launch testing.
 
 **Decision:** proceed with an original NOVRIELLE storefront inspired by the reference site's retail structure, with image-led fashion merchandising, local Bangladesh commerce assumptions, and fully isolated store data and admin infrastructure.
+
+---
+
+## 17. Implementation progress — 13 November 2026
+
+### Completed in the first storefront build
+
+- Added `index.html`, `styles.css`, and `app.js` for the NOVRIELLE storefront prototype.
+- Added the NOVRIELLE favicon and a project README describing preview limitations.
+- Added 15 selected product photographs under `assets/images/products/`.
+- Implemented announcement bar, sticky header, desktop/mobile navigation, editorial hero, category cards, new-arrival and collection grids, category feature sections, story panel, service notes, newsletter preview and footer.
+- Implemented product quick view, catalogue search, category tabs, browser-local wishlist, browser-local preview bag, toast feedback and a checkout-preview notice.
+- Kept unknown prices, stock, delivery policies and order status out of the public claims. No live order submission is represented as operational.
+- Verified the main source files and all 15 image asset paths exist on the `main` branch.
+
+### Not yet completed
+
+- Production deployment: ShipStatic's connected Free account has reached its 100-deployment cap. Vercel requires the connected GitHub project to be authorized for the target team before project creation/deployment can proceed.
+- Product data: real SKU, price, sizes, colors, inventory, and product descriptions still require approval.
+- Backend: independent NOVRIELLE API/database, protected admin, authentication, order persistence and tracking are not yet provisioned.
+- Commercial image-rights clearance is still required before the selected third-party-origin product photography is used for public retail.
+
+### Next implementation step
+
+Authorize Vercel team access, create the Git-connected Vercel project for `faysaltalukder/NOVRIELLE`, deploy the current `main` commit, and verify the production URL and asset loading. Then continue with the independent catalogue and order backend.
