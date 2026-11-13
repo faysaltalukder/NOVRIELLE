@@ -733,3 +733,27 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
     font-size:11px;
   }
 }
+
+
+/* Shared homepage alignment: hero uses the same responsive container as every content section. */
+.hero-section{
+  width:var(--container);
+  max-width:1320px;
+  margin:10px auto 0;
+  padding:0;
+}
+.hero-slider{
+  width:100%;
+}
+@media(max-width:900px){
+  .hero-section{
+    width:var(--container);
+    margin-top:8px;
+  }
+}
+@media(max-width:650px){
+  .hero-section{
+    width:var(--container);
+    margin-top:7px;
+  }
+}
