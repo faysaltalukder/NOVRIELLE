@@ -409,3 +409,9 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
   .hero-dots button{width:8px;height:8px}
   .hero-dots button.is-active{width:23px;height:8px}
 }
+
+
+/* Keep the supplied campaign artwork clean; carousel controls remain visible. */
+.hero-slide__shade,
+.hero-slide__copy,
+.hero-slide__side-note{display:none}
