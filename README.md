@@ -4,7 +4,10 @@ NOVRIELLE is an original fashion and lifestyle storefront prototype inspired by 
 
 ## Current status
 
-The repository now contains the first public storefront preview:
+**Live on GitHub Pages:** https://faysaltalukder.github.io/NOVRIELLE/  
+Publishing source: `main` branch, repository root. The Pages build/deploy workflow has completed successfully.
+
+The repository contains the first public storefront preview:
 
 - Responsive editorial homepage and category navigation.
 - Curated local fashion photography in `assets/images/products/`.
@@ -24,6 +27,10 @@ This is currently a **front-end collection preview**, not an operational online 
 - Contact, shipping and return policy information is intentionally marked as coming soon rather than invented.
 
 Before accepting public orders, connect an independent NOVRIELLE API and database, confirm catalogue and commercial image rights, and publish the approved business policies.
+
+## Deployment
+
+The static storefront is published directly from this GitHub repository using GitHub Pages. Commits to the configured `main` branch publish updates through GitHub Pages. No third-party frontend hosting is required.
 
 ## Run locally
 
