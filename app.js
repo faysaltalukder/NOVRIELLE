@@ -2,396 +2,379 @@
   "use strict";
 
   const products = [
-    {id:"w-sage",name:"Sage Gathered Blouse",category:"women",label:"WOMEN",image:"./assets/images/products/women-sage-gathered-top.png",alt:"Sage green gathered blouse",description:"A softly gathered silhouette with an easy, relaxed feel. Part of the NOVRIELLE collection preview."},
-    {id:"w-ivory-layer",name:"Ivory Layered Blouse",category:"women",label:"WOMEN",image:"./assets/images/products/women-ivory-layered-blouse.png",alt:"Ivory layered blouse",description:"Light layers and a clean silhouette for a considered everyday look."},
-    {id:"w-floral",name:"Floral Day Dress",category:"women",label:"WOMEN",image:"./assets/images/products/women-floral-day-dress.png",alt:"Floral day dress",description:"A floral statement with a relaxed shape and expressive detail."},
-    {id:"w-rose-jacket",name:"Rose Utility Jacket",category:"women",label:"WOMEN",image:"./assets/images/products/women-rose-utility-jacket.png",alt:"Rose utility jacket",description:"An easy outer layer with a practical shape and soft color."},
-    {id:"w-piped-shirt",name:"Ivory Piped Shirt",category:"women",label:"WOMEN",image:"./assets/images/products/women-ivory-piped-shirt.png",alt:"Ivory piped shirt",description:"Crisp lines and understated contrast for an everyday wardrobe."},
-    {id:"w-sky-blouse",name:"Sky Tie Blouse",category:"women",label:"WOMEN",image:"./assets/images/products/women-sky-tie-blouse.png",alt:"Sky blue tie blouse",description:"A fresh blue tone and a soft tie detail make this piece easy to style."},
-    {id:"w-berry-tunic",name:"Berry Printed Tunic",category:"women",label:"WOMEN",image:"./assets/images/products/women-berry-printed-tunic.png",alt:"Berry printed tunic",description:"A richly colored print with a comfortable, easy-wearing feel."},
-    {id:"w-wrap",name:"Ivory Wrap Top",category:"women",label:"WOMEN",image:"./assets/images/products/women-ivory-wrap-top.jpeg",alt:"Ivory wrap top",description:"A clean wrap-inspired layer with a soft, minimal finish."},
-    {id:"w-noir",name:"Noir Embroidered Top",category:"women",label:"WOMEN",image:"./assets/images/products/women-noir-embroidered-top.jpeg",alt:"Black embroidered top",description:"A dark, considered top with delicate decorative detailing."},
-    {id:"m-heritage",name:"Heritage Kurta",category:"men",label:"MEN",image:"./assets/images/products/men-heritage-kurta.jpeg",alt:"Men's heritage kurta",description:"A contemporary take on a familiar silhouette, styled for a confident everyday look."},
-    {id:"m-crimson-jacket",name:"Crimson Zip Jacket",category:"men",label:"MEN",image:"./assets/images/products/men-crimson-zip-jacket.jpeg",alt:"Crimson zip jacket",description:"An uncomplicated outer layer with a strong color statement."},
-    {id:"m-crimson-kurta",name:"Crimson Everyday Kurta",category:"men",label:"MEN",image:"./assets/images/products/men-crimson-kurta.jpeg",alt:"Crimson everyday kurta",description:"A clean, classic shape with a modern point of view."},
-    {id:"k-weekend",name:"Weekend Set",category:"kids",label:"KIDS",image:"./assets/images/products/kids-weekend-set.jpeg",alt:"Kids' coordinated weekend outfits",description:"Comfort-first outfits for little adventures and everyday moments."},
-    {id:"k-blush",name:"Blush Flower Dress",category:"kids",label:"KIDS",image:"./assets/images/products/baby-blush-dress.jpeg",alt:"Baby blush flower dress",description:"A playful little dress for special moments and everyday smiles."},
-    {id:"k-coral-tee",name:"Coral Graphic Tee",category:"kids",label:"KIDS",image:"./assets/images/products/kids-coral-graphic-tee.jpeg",alt:"Coral graphic T-shirt for kids",description:"An easy T-shirt with a bright, playful graphic."}
+    {id:"w-sage",name:"Sage Gathered Blouse",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-sage-gathered-top.png",alt:"Sage green gathered blouse"},
+    {id:"w-ivory-layer",name:"Ivory Layered Blouse",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-ivory-layered-blouse.png",alt:"Ivory layered blouse"},
+    {id:"w-floral",name:"Floral Day Dress",category:"women",group:"Ethnic Wear",image:"./assets/images/products/women-floral-day-dress.png",alt:"Floral day dress"},
+    {id:"w-rose-jacket",name:"Rose Utility Jacket",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-rose-utility-jacket.png",alt:"Rose utility jacket"},
+    {id:"w-piped",name:"Ivory Piped Shirt",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-ivory-piped-shirt.png",alt:"Ivory piped shirt"},
+    {id:"w-sky",name:"Sky Tie Blouse",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-sky-tie-blouse.png",alt:"Sky blue tie blouse"},
+    {id:"w-berry",name:"Berry Printed Tunic",category:"women",group:"Ethnic Wear",image:"./assets/images/products/women-berry-printed-tunic.png",alt:"Berry printed tunic"},
+    {id:"w-wrap",name:"Ivory Wrap Top",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-ivory-wrap-top.jpeg",alt:"Ivory wrap top"},
+    {id:"w-noir",name:"Noir Embroidered Top",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-noir-embroidered-top.jpeg",alt:"Black embroidered top"},
+    {id:"w-navy",name:"Navy Everyday Tee",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-navy-casual-top.jpeg",alt:"Navy women's casual top"},
+    {id:"w-midi",name:"Noir Midi Dress",category:"women",group:"Ethnic Wear",image:"./assets/images/products/women-noir-midi-dress.png",alt:"Black midi dress"},
+    {id:"w-coral",name:"Coral Utility Jacket",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-coral-utility-jacket.png",alt:"Coral utility jacket"},
+    {id:"w-white",name:"White Layered Shirt",category:"women",group:"Womens Top Wear",image:"./assets/images/products/women-white-layered-shirt.png",alt:"White layered shirt"},
+    {id:"w-cobalt",name:"Cobalt Embroidered Tunic",category:"women",group:"Ethnic Wear",image:"./assets/images/products/women-cobalt-embroidered-tunic.png",alt:"Cobalt embroidered tunic"},
+    {id:"w-ethnic",name:"Occasion Edit Set",category:"women",group:"Ethnic Wear",image:"./assets/images/products/women-ethnic-occasion-set.jpeg",alt:"Women's ethnic occasion set"},
+
+    {id:"m-heritage",name:"Heritage Kurta",category:"men",group:"Panjabi",image:"./assets/images/products/men-heritage-kurta.jpeg",alt:"Men's heritage kurta"},
+    {id:"m-jacket",name:"Crimson Zip Jacket",category:"men",group:"Mens Top Wear",image:"./assets/images/products/men-crimson-zip-jacket.jpeg",alt:"Crimson zip jacket"},
+    {id:"m-crimson",name:"Crimson Everyday Kurta",category:"men",group:"Panjabi",image:"./assets/images/products/men-crimson-kurta.jpeg",alt:"Crimson kurta"},
+    {id:"m-sky",name:"Sky Blue Polo",category:"men",group:"Mens Top Wear",image:"./assets/images/products/men-sky-polo.png",alt:"Sky blue men's polo"},
+    {id:"m-stripe",name:"Red Stripe Polo",category:"men",group:"Mens Top Wear",image:"./assets/images/products/men-red-stripe-polo.png",alt:"Red striped men's polo"},
+    {id:"m-plum",name:"Plum Heritage Kurta",category:"men",group:"Panjabi",image:"./assets/images/products/men-plum-kurta.jpeg",alt:"Plum men's kurta"},
+    {id:"m-ivory",name:"Ivory Classic Kurta",category:"men",group:"Panjabi",image:"./assets/images/products/men-ivory-kurta.jpeg",alt:"Ivory men's kurta"},
+    {id:"m-blue-shirt",name:"Blue Printed Shirt",category:"men",group:"Mens Top Wear",image:"./assets/images/products/men-blue-printed-shirt.jpeg",alt:"Blue printed men's shirt"},
+
+    {id:"k-weekend",name:"Kids Weekend Set",category:"kids",group:"Kids Collection",image:"./assets/images/products/kids-weekend-set.jpeg",alt:"Kids coordinated weekend outfits"},
+    {id:"k-blush",name:"Blush Flower Dress",category:"kids",group:"Kids Collection",image:"./assets/images/products/baby-blush-dress.jpeg",alt:"Blush flower dress"},
+    {id:"k-coral-tee",name:"Coral Graphic Tee",category:"kids",group:"Kids Collection",image:"./assets/images/products/kids-coral-graphic-tee.jpeg",alt:"Coral graphic tee for kids"},
+    {id:"k-navy-set",name:"Navy Floral Co-ord",category:"kids",group:"Kids Collection",image:"./assets/images/products/kids-navy-floral-set.png",alt:"Navy floral kids set"},
+    {id:"k-teal-set",name:"Teal Ethnic Set",category:"kids",group:"Kids Collection",image:"./assets/images/products/kids-teal-ethnic-set.png",alt:"Teal ethnic set for kids"},
+    {id:"k-floral-dress",name:"Floral Party Dress",category:"kids",group:"Kids Collection",image:"./assets/images/products/kids-floral-party-dress.jpeg",alt:"Floral party dress for kids"},
+    {id:"k-sand-kurta",name:"Sand Classic Kurta",category:"kids",group:"Panjabi",image:"./assets/images/products/kids-sand-kurta.jpeg",alt:"Sand kurta for boys"},
+    {id:"k-indigo-kurta",name:"Indigo Occasion Kurta",category:"kids",group:"Panjabi",image:"./assets/images/products/kids-indigo-kurta.jpeg",alt:"Indigo kurta for boys"},
+
+    {id:"a-wallet-black",name:"Black Leather Wallet",category:"accessories",group:"Mens Wallet",image:"./assets/images/products/accessory-black-leather-wallet.jpeg",alt:"Black leather wallet"},
+    {id:"a-wallet-brown",name:"Brown Long Wallet",category:"accessories",group:"Mens Wallet",image:"./assets/images/products/accessory-brown-long-wallet.jpeg",alt:"Brown long wallet"},
+    {id:"a-wallet-woven",name:"Woven Leather Wallet",category:"accessories",group:"Mens Wallet",image:"./assets/images/products/accessory-woven-wallet.jpeg",alt:"Woven leather wallet"},
+    {id:"a-wallet-fold",name:"Black Fold Wallet",category:"accessories",group:"Mens Wallet",image:"./assets/images/products/accessory-black-fold-wallet.jpeg",alt:"Black fold wallet"},
+    {id:"a-wallet-open",name:"Classic Open Wallet",category:"accessories",group:"Mens Wallet",image:"./assets/images/products/accessory-open-wallet.jpeg",alt:"Open black wallet"},
+    {id:"a-wallet-slim",name:"Slim Leather Wallet",category:"accessories",group:"Mens Wallet",image:"./assets/images/products/accessory-slim-wallet.png",alt:"Slim black wallet"},
+    {id:"a-cap",name:"Camo Everyday Cap",category:"accessories",group:"Caps",image:"./assets/images/products/accessory-camo-cap.png",alt:"Camouflage cap"},
+    {id:"a-belt",name:"Brown Leather Belt",category:"accessories",group:"Mens Belt",image:"./assets/images/products/accessory-brown-leather-belt.jpeg",alt:"Brown leather belt"}
   ];
 
   const productMap = new Map(products.map(product => [product.id, product]));
   const state = {
-    filter: "all",
+    cart: readStorage("novrielle-cart", []),
+    wishlist: readStorage("novrielle-wishlist", []),
     search: "",
-    cart: readStore("novrielle-cart", []),
-    wishlist: readStore("novrielle-wishlist", []),
+    activeTrending: "panjabi",
+    activeAccessory: "wallets",
+    heroSlide: 0,
+    heroTimer: null,
     toastTimer: null
   };
 
-  const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+  const shelves = {
+    new: ["w-ethnic","m-heritage","w-sage","k-floral-dress","m-sky","w-midi","k-weekend","w-cobalt","m-blue-shirt","w-rose-jacket","k-teal-set","a-wallet-black"],
+    panjabi: ["m-heritage","m-crimson","m-plum","m-ivory","k-sand-kurta","k-indigo-kurta","m-heritage","m-plum","m-crimson","m-ivory","k-sand-kurta","k-indigo-kurta"],
+    ethnic: ["w-ethnic","w-berry","w-cobalt","w-floral","w-sky","k-teal-set","k-floral-dress","k-navy-set","w-midi","w-ethnic","w-cobalt","w-berry"],
+    menswear: ["m-sky","m-stripe","m-blue-shirt","m-jacket","m-heritage","m-crimson","m-plum","m-ivory","m-sky","m-stripe","m-blue-shirt","m-jacket"],
+    womenswear: ["w-sage","w-piped","w-wrap","w-noir","w-navy","w-white","w-coral","w-sky","w-midi","w-cobalt","w-berry","w-rose-jacket"],
+    wallets: ["a-wallet-black","a-wallet-brown","a-wallet-woven","a-wallet-fold","a-wallet-open","a-wallet-slim","a-wallet-black","a-wallet-woven"],
+    belts: ["a-belt","a-belt","a-wallet-brown","a-wallet-black"],
+    caps: ["a-cap","a-cap","a-wallet-black","a-wallet-brown"],
+    all: ["a-wallet-black","a-wallet-brown","a-wallet-woven","a-wallet-fold","a-wallet-open","a-wallet-slim","a-cap","a-belt"]
+  };
 
-  function readStore(key, fallback) {
+  const $ = (selector, root=document) => root.querySelector(selector);
+  const $$ = (selector, root=document) => Array.from(root.querySelectorAll(selector));
+
+  function readStorage(key, fallback) {
     try {
-      const value = JSON.parse(localStorage.getItem(key));
-      return Array.isArray(value) ? value : fallback;
-    } catch {
-      return fallback;
-    }
+      const parsed = JSON.parse(localStorage.getItem(key));
+      return Array.isArray(parsed) ? parsed : fallback;
+    } catch { return fallback; }
   }
 
-  function writeStore() {
+  function persist() {
     try {
       localStorage.setItem("novrielle-cart", JSON.stringify(state.cart));
       localStorage.setItem("novrielle-wishlist", JSON.stringify(state.wishlist));
     } catch {
-      showToast("Your browser could not save this preview selection.");
+      toast("Your browser could not save this preview selection.");
     }
   }
 
-  function escapeHtml(value) {
-    return String(value).replace(/[&<>"']/g, char => ({
-      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-    }[char]));
+  function safe(text) {
+    return String(text).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   }
 
-  function productCard(product) {
+  function renderCard(product, index) {
+    if (!product) return "";
     const saved = state.wishlist.includes(product.id);
+    const badge = index < 3 ? "NEW EDIT" : "NOVRIELLE";
     return `
-      <article class="product-card" data-product-id="${product.id}">
-        <div class="product-card__image" role="button" tabindex="0" data-action="details" data-id="${product.id}" aria-label="View ${escapeHtml(product.name)} details">
-          <img src="${product.image}" alt="${escapeHtml(product.alt)}" loading="lazy">
-          <span class="product-card__label">Collection preview</span>
-          <button class="product-card__wishlist ${saved ? "is-saved" : ""}" type="button" data-action="wishlist-toggle" data-id="${product.id}" aria-label="${saved ? "Remove from" : "Add to"} wishlist" aria-pressed="${saved}">
+      <article class="product-card" data-product="${product.id}">
+        <div class="product-card__image" role="button" tabindex="0" data-action="details" data-id="${product.id}" aria-label="View details for ${safe(product.name)}">
+          <img src="${product.image}" alt="${safe(product.alt)}" loading="lazy">
+          <span class="product-card__badge">${badge}</span>
+          <button type="button" class="product-card__wishlist ${saved ? "is-saved" : ""}" data-action="wishlist" data-id="${product.id}" aria-label="${saved ? "Remove from wishlist" : "Add to wishlist"}" aria-pressed="${saved}">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 5.8a5 5 0 0 0-7.1 0L12 7.1l-1.3-1.3a5 5 0 0 0-7.1 7.1l1.3 1.3L12 21l7.1-6.8 1.3-1.3a5 5 0 0 0 0-7.1Z"/></svg>
           </button>
-          <button class="product-card__view" type="button" data-action="details" data-id="${product.id}">Quick view</button>
+          <button class="product-card__quick" type="button" data-action="details" data-id="${product.id}">Quick View</button>
         </div>
-        <div class="product-card__info">
-          <div class="product-card__category">${product.label} · FIRST EDIT</div>
-          <h3 class="product-card__title">${escapeHtml(product.name)}</h3>
-          <div class="product-card__note">Official details coming soon</div>
-          <div class="product-card__actions">
-            <span class="product-card__price">Price to be announced</span>
-            <button class="product-card__add" type="button" data-action="add-to-bag" data-id="${product.id}">Add to preview bag +</button>
-          </div>
+        <div class="product-card__body">
+          <div class="product-card__category">${safe(product.group)}</div>
+          <h3 class="product-card__name">${safe(product.name)}</h3>
+          <div class="product-card__price-row"><span class="product-card__price">Price coming soon</span><span class="product-card__more">Details ↗</span></div>
+          <button class="product-card__add" type="button" data-action="add-cart" data-id="${product.id}">Add to preview bag</button>
         </div>
       </article>`;
   }
 
-  function filteredProducts(filter = state.filter, search = state.search) {
-    const term = search.trim().toLowerCase();
-    return products.filter(product => {
-      const matchesCategory = filter === "all" || product.category === filter;
-      const matchesSearch = !term || [product.name, product.category, product.description].some(value => value.toLowerCase().includes(term));
-      return matchesCategory && matchesSearch;
-    });
-  }
-
-  function renderProductLists() {
-    const visible = filteredProducts();
-    const primary = $("#product-grid");
-    const shop = $("#shop-grid");
-    if (primary) primary.innerHTML = visible.slice(0, 8).map(productCard).join("") || '<p class="empty-results">No pieces match that search just yet.</p>';
-    if (shop) shop.innerHTML = visible.map(productCard).join("") || '<p class="empty-results">No pieces match that search just yet.</p>';
-    syncWishlistCount();
-  }
-
-  function syncCartCount() {
-    const count = state.cart.reduce((sum, item) => sum + item.quantity, 0);
-    const countNode = $("#cart-count");
-    const drawerCount = $("#drawer-cart-count");
-    if (countNode) countNode.textContent = String(count);
-    if (drawerCount) drawerCount.textContent = `(${count})`;
-  }
-
-  function syncWishlistCount() {
-    const count = state.wishlist.length;
-    const countNode = $("#wishlist-count");
-    const drawerCount = $("#drawer-wishlist-count");
-    if (countNode) countNode.textContent = String(count);
-    if (drawerCount) drawerCount.textContent = `(${count})`;
-  }
-
-  function showToast(message) {
-    const toast = $("#toast");
-    if (!toast) return;
-    toast.textContent = message;
-    toast.classList.add("is-visible");
-    window.clearTimeout(state.toastTimer);
-    state.toastTimer = window.setTimeout(() => toast.classList.remove("is-visible"), 2600);
-  }
-
-  function openLayer(element) {
-    const overlay = $("#overlay");
-    if (!element || !overlay) return;
-    closeLayers();
-    overlay.hidden = false;
-    requestAnimationFrame(() => overlay.classList.add("is-visible"));
-    element.classList.add("is-open");
-    element.setAttribute("aria-hidden", "false");
-    document.body.classList.add("has-overlay");
-  }
-
-  function closeLayers() {
-    const overlay = $("#overlay");
-    $$(".drawer.is-open").forEach(drawer => {
-      drawer.classList.remove("is-open");
-      drawer.setAttribute("aria-hidden", "true");
-    });
-    if (overlay) {
-      overlay.classList.remove("is-visible");
-      window.setTimeout(() => { overlay.hidden = true; }, 260);
+  function renderShelf(target, ids) {
+    const node = $(target);
+    if (!node) return;
+    const term = state.search.trim().toLowerCase();
+    let list = ids.map(id => productMap.get(id)).filter(Boolean);
+    if (term) {
+      list = products.filter(p => [p.name,p.category,p.group,p.alt].some(v => v.toLowerCase().includes(term)));
+      const title = $(".section-title-row h2", $("#new-collection"));
+      if (title) title.textContent = "Search Results";
+    } else if (target === "#new-products") {
+      const title = $(".section-title-row h2", $("#new-collection"));
+      if (title) title.textContent = "New Collection";
     }
-    document.body.classList.remove("has-overlay");
+    node.innerHTML = list.map((product,i) => renderCard(product,i)).join("") || '<div class="empty-results">No matching products found. Try another search.</div>';
+  }
+
+  function renderAll() {
+    renderShelf("#new-products", shelves.new);
+    if (!state.search) {
+      renderShelf("#trending-products", shelves[state.activeTrending]);
+      renderShelf("#accessory-products", shelves[state.activeAccessory]);
+    } else {
+      $("#trending-products").innerHTML = "";
+      $("#accessory-products").innerHTML = "";
+    }
+    syncCounts();
+  }
+
+  function syncCounts() {
+    const cartCount = state.cart.reduce((n,item)=>n+item.quantity,0);
+    $("#cart-count").textContent = String(cartCount);
+    $("#wishlist-count").textContent = String(state.wishlist.length);
+    $("#drawer-cart-count").textContent = `(${cartCount})`;
+    $("#drawer-wishlist-count").textContent = `(${state.wishlist.length})`;
+  }
+
+  function toast(message) {
+    const node = $("#toast");
+    if (!node) return;
+    node.textContent = message;
+    node.classList.add("is-visible");
+    clearTimeout(state.toastTimer);
+    state.toastTimer = setTimeout(()=>node.classList.remove("is-visible"),2600);
   }
 
   function renderCart() {
-    const target = $("#cart-items");
-    if (!target) return;
+    const node = $("#cart-items");
+    if (!node) return;
     if (!state.cart.length) {
-      target.innerHTML = '<p class="drawer-empty">Your bag is waiting for a little inspiration.</p>';
+      node.innerHTML = '<p class="drawer-empty">Your cart is empty. Start exploring the collection.</p>';
     } else {
-      target.innerHTML = state.cart.map(item => {
-        const product = productMap.get(item.id);
-        if (!product) return "";
-        return `
-          <div class="drawer-item">
-            <img src="${product.image}" alt="${escapeHtml(product.alt)}">
-            <div><h3>${escapeHtml(product.name)}</h3><p>Qty: ${item.quantity} · Preview only</p></div>
-            <button class="drawer-remove" type="button" data-action="remove-cart" data-id="${product.id}">Remove</button>
-          </div>`;
+      node.innerHTML = state.cart.map(item => {
+        const p = productMap.get(item.id);
+        if (!p) return "";
+        return `<div class="drawer-item">
+          <img src="${p.image}" alt="${safe(p.alt)}">
+          <div><h3>${safe(p.name)}</h3><p>Quantity: ${item.quantity} · Product preview</p></div>
+          <button type="button" data-action="remove-cart" data-id="${p.id}">Remove</button>
+        </div>`;
       }).join("");
     }
-    syncCartCount();
+    syncCounts();
   }
 
   function renderWishlist() {
-    const target = $("#wishlist-items");
-    if (!target) return;
-    const saved = state.wishlist.map(id => productMap.get(id)).filter(Boolean);
-    if (!saved.length) {
-      target.innerHTML = '<p class="drawer-empty">Save the pieces that feel like you.</p>';
-    } else {
-      target.innerHTML = saved.map(product => `
-        <div class="drawer-item">
-          <img src="${product.image}" alt="${escapeHtml(product.alt)}">
-          <div><h3>${escapeHtml(product.name)}</h3><p>${product.label} · Collection preview</p></div>
-          <button class="drawer-remove" type="button" data-action="wishlist-toggle" data-id="${product.id}">Remove</button>
-        </div>`).join("");
-    }
-    syncWishlistCount();
+    const node = $("#wishlist-items");
+    if (!node) return;
+    const list = state.wishlist.map(id=>productMap.get(id)).filter(Boolean);
+    if (!list.length) node.innerHTML = '<p class="drawer-empty">Your wishlist is waiting for your favourites.</p>';
+    else node.innerHTML = list.map(p=>`<div class="drawer-item">
+      <img src="${p.image}" alt="${safe(p.alt)}">
+      <div><h3>${safe(p.name)}</h3><p>${safe(p.group)}</p></div>
+      <button type="button" data-action="wishlist" data-id="${p.id}">Remove</button>
+    </div>`).join("");
+    syncCounts();
   }
 
-  function addToCart(id) {
-    const existing = state.cart.find(item => item.id === id);
-    if (existing) existing.quantity += 1;
-    else state.cart.push({id, quantity:1});
-    writeStore();
-    renderCart();
-    showToast("Added to your preview bag. Orders are not open yet.");
+  function showDrawer(id) {
+    closeDrawers();
+    const drawer = $(id);
+    $("#overlay").hidden = false;
+    requestAnimationFrame(()=>$("#overlay").classList.add("is-visible"));
+    drawer.classList.add("is-open");
+    drawer.setAttribute("aria-hidden","false");
+    document.body.classList.add("has-overlay");
   }
 
-  function toggleWishlist(id) {
-    if (state.wishlist.includes(id)) {
-      state.wishlist = state.wishlist.filter(value => value !== id);
-      showToast("Removed from your wishlist.");
-    } else {
-      state.wishlist.push(id);
-      showToast("Saved to your wishlist.");
-    }
-    writeStore();
-    renderProductLists();
-    renderWishlist();
-  }
-
-  function openProduct(id) {
-    const product = productMap.get(id);
-    if (!product) return;
-    const target = $("#modal-product-content");
-    target.innerHTML = `
-      <div class="modal-product">
-        <div class="modal-product__image"><img src="${product.image}" alt="${escapeHtml(product.alt)}"></div>
-        <div class="modal-product__info">
-          <span class="modal-product__category">${product.label} · FIRST EDIT</span>
-          <h2 id="modal-product-title">${escapeHtml(product.name)}</h2>
-          <p>${escapeHtml(product.description)}</p>
-          <span class="modal-product__availability">Product details & pricing to be confirmed</span>
-          <button class="button button--dark button--full" type="button" data-action="add-to-bag" data-id="${product.id}">Add to preview bag</button>
-          <p class="form-note">This item is shown for design preview. Sizes, price, inventory and ordering will be enabled after the official product catalogue is approved.</p>
-        </div>
-      </div>`;
-    const modal = $("#product-modal");
-    if (modal) {
-      closeLayers();
-      $("#overlay").hidden = false;
-      requestAnimationFrame(() => $("#overlay").classList.add("is-visible"));
-      modal.classList.add("is-open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("has-overlay");
-    }
-  }
-
-  function closeModal() {
-    const modal = $("#product-modal");
-    if (!modal) return;
-    modal.classList.remove("is-open");
-    modal.setAttribute("aria-hidden", "true");
-    const overlay = $("#overlay");
-    if (overlay) {
-      overlay.classList.remove("is-visible");
-      window.setTimeout(() => { overlay.hidden = true; }, 260);
-    }
+  function closeDrawers() {
+    $$(".drawer.is-open").forEach(drawer=>{
+      drawer.classList.remove("is-open");
+      drawer.setAttribute("aria-hidden","true");
+    });
+    $("#overlay").classList.remove("is-visible");
+    setTimeout(()=>$("#overlay").hidden=true,250);
     document.body.classList.remove("has-overlay");
   }
 
-  function setFilter(filter, shouldScroll = false) {
-    state.filter = ["all","women","men","kids"].includes(filter) ? filter : "all";
-    $$(".filter-pill").forEach(button => {
-      const active = button.dataset.filter === state.filter;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
-    $$(".collection-tab").forEach(button => {
-      const active = button.dataset.collection === state.filter;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-selected", String(active));
-    });
-    renderProductLists();
-    if (shouldScroll) $("#shop")?.scrollIntoView({behavior:"smooth",block:"start"});
+  function closeModal() {
+    const modal=$("#product-modal");
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden","true");
+    $("#overlay").classList.remove("is-visible");
+    setTimeout(()=>$("#overlay").hidden=true,250);
+    document.body.classList.remove("has-overlay");
   }
 
-  function openCart() {
+  function openProduct(id) {
+    const p=productMap.get(id);
+    if(!p)return;
+    $("#modal-product-content").innerHTML=`<div class="modal-product">
+      <div class="modal-product__image"><img src="${p.image}" alt="${safe(p.alt)}"></div>
+      <div class="modal-product__info">
+        <small>${safe(p.group)} · NOVRIELLE COLLECTION</small>
+        <h2 id="modal-product-title">${safe(p.name)}</h2>
+        <p>Part of the NOVRIELLE collection preview. Official product description, size options, colour availability and pricing will be published with the confirmed catalogue.</p>
+        <span class="modal-product__note">PRODUCT DETAILS COMING SOON</span>
+        <button type="button" class="dark-button dark-button--full" data-action="add-cart" data-id="${p.id}">ADD TO PREVIEW CART</button>
+      </div>
+    </div>`;
+    closeDrawers();
+    $("#overlay").hidden=false;
+    requestAnimationFrame(()=>$("#overlay").classList.add("is-visible"));
+    $("#product-modal").classList.add("is-open");
+    $("#product-modal").setAttribute("aria-hidden","false");
+    document.body.classList.add("has-overlay");
+  }
+
+  function addCart(id) {
+    const found=state.cart.find(item=>item.id===id);
+    if(found)found.quantity++;
+    else state.cart.push({id,quantity:1});
+    persist();
     renderCart();
-    openLayer($("#cart-drawer"));
+    toast("Added to your preview cart. Orders are not open yet.");
   }
 
-  function openWishlist() {
+  function toggleWishlist(id) {
+    if(state.wishlist.includes(id)){
+      state.wishlist=state.wishlist.filter(value=>value!==id);
+      toast("Removed from wishlist.");
+    }else{
+      state.wishlist.push(id);
+      toast("Added to wishlist.");
+    }
+    persist();
+    renderAll();
     renderWishlist();
-    openLayer($("#wishlist-drawer"));
   }
 
-  document.addEventListener("click", event => {
-    const actionNode = event.target.closest("[data-action]");
-    if (actionNode) {
-      const action = actionNode.dataset.action;
-      const id = actionNode.dataset.id;
-      if (action === "cart") openCart();
-      if (action === "wishlist") openWishlist();
-      if (action === "add-to-bag") addToCart(id);
-      if (action === "wishlist-toggle") toggleWishlist(id);
-      if (action === "details") openProduct(id);
-      if (action === "remove-cart") {
-        state.cart = state.cart.filter(item => item.id !== id);
-        writeStore();
-        renderCart();
-        showToast("Removed from your preview bag.");
-      }
-      if (action === "account") showToast("Customer accounts will open when the store backend is connected.");
-    }
-    if (event.target.closest("[data-close-drawer]")) closeLayers();
-    if (event.target.closest("[data-close-modal]")) closeModal();
-    if (event.target.id === "overlay") {
-      closeLayers();
-      closeModal();
-    }
-    const filterLink = event.target.closest("[data-filter-link]");
-    if (filterLink) {
-      event.preventDefault();
-      setFilter(filterLink.dataset.filterLink, true);
-    }
-    const categoryLink = event.target.closest("[data-category-link]");
-    if (categoryLink) {
-      event.preventDefault();
-      setFilter(categoryLink.dataset.categoryLink, true);
-    }
-  });
-
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      closeLayers();
-      closeModal();
-      const nav = $("#mobile-nav");
-      const toggle = $(".mobile-menu-toggle");
-      if (nav && toggle) {
-        nav.hidden = true;
-        toggle.setAttribute("aria-expanded", "false");
-      }
-    }
-    const card = event.target.closest?.(".product-card__image[data-action='details']");
-    if (card && (event.key === "Enter" || event.key === " ")) {
-      event.preventDefault();
-      openProduct(card.dataset.id);
-    }
-  });
-
-  $$(".filter-pill").forEach(button => button.addEventListener("click", () => setFilter(button.dataset.filter)));
-  $$(".collection-tab").forEach(button => button.addEventListener("click", () => setFilter(button.dataset.collection)));
-
-  const searchInput = $("#site-search");
-  const searchForm = $("#search-form");
-  const searchClear = $("#search-clear");
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      state.search = searchInput.value;
-      if (searchClear) searchClear.hidden = !state.search;
-      renderProductLists();
-      if (state.search.trim()) $("#new-in")?.scrollIntoView({behavior:"smooth",block:"start"});
-    });
+  function setHero(index) {
+    const slides=$$(".hero-slide");
+    state.heroSlide=(index+slides.length)%slides.length;
+    slides.forEach((slide,i)=>slide.classList.toggle("is-active",i===state.heroSlide));
+    $$("#hero-dots button").forEach((dot,i)=>dot.classList.toggle("is-active",i===state.heroSlide));
   }
-  searchForm?.addEventListener("submit", event => {
-    event.preventDefault();
-    state.search = searchInput?.value || "";
-    renderProductLists();
-    $("#new-in")?.scrollIntoView({behavior:"smooth",block:"start"});
-  });
-  searchClear?.addEventListener("click", () => {
-    if (searchInput) searchInput.value = "";
-    state.search = "";
-    searchClear.hidden = true;
-    renderProductLists();
+
+  $("#hero-prev").addEventListener("click",()=>setHero(state.heroSlide-1));
+  $("#hero-next").addEventListener("click",()=>setHero(state.heroSlide+1));
+  $$("#hero-dots button").forEach(button=>button.addEventListener("click",()=>setHero(Number(button.dataset.slideTo))));
+  state.heroTimer=setInterval(()=>setHero(state.heroSlide+1),6500);
+
+  $("#category-toggle").addEventListener("click",()=>{
+    const menu=$("#mega-menu");
+    const open=menu.hidden;
+    menu.hidden=!open;
+    $("#category-toggle").setAttribute("aria-expanded",String(open));
   });
 
-  $(".mobile-menu-toggle")?.addEventListener("click", event => {
-    const button = event.currentTarget;
-    const nav = $("#mobile-nav");
-    const expanded = button.getAttribute("aria-expanded") === "true";
-    button.setAttribute("aria-expanded", String(!expanded));
-    button.setAttribute("aria-label", expanded ? "Open navigation" : "Close navigation");
-    if (nav) nav.hidden = expanded;
+  $("#mobile-menu-button").addEventListener("click",()=>{
+    const nav=$("#mobile-navigation");
+    const open=nav.hidden;
+    nav.hidden=!open;
+    $("#mobile-menu-button").setAttribute("aria-expanded",String(open));
   });
-  $$("#mobile-nav a").forEach(link => link.addEventListener("click", () => {
-    $("#mobile-nav").hidden = true;
-    $(".mobile-menu-toggle")?.setAttribute("aria-expanded", "false");
+  $$("#mobile-navigation a").forEach(link=>link.addEventListener("click",()=>{
+    $("#mobile-navigation").hidden=true;
+    $("#mobile-menu-button").setAttribute("aria-expanded","false");
   }));
 
-  $("#preview-checkout")?.addEventListener("click", () => {
-    showToast("Checkout is in preview mode. Orders will open after prices, delivery rules and secure backend are configured.");
+  document.addEventListener("click",event=>{
+    const openButton=event.target.closest("[data-open]");
+    if(openButton){
+      const type=openButton.dataset.open;
+      if(type==="cart"){renderCart();showDrawer("#cart-drawer");}
+      if(type==="wishlist"){renderWishlist();showDrawer("#wishlist-drawer");}
+      if(type==="account")toast("Customer accounts will be enabled after the store backend is connected.");
+    }
+    const action=event.target.closest("[data-action]");
+    if(action){
+      const id=action.dataset.id;
+      if(action.dataset.action==="details")openProduct(id);
+      if(action.dataset.action==="wishlist")toggleWishlist(id);
+      if(action.dataset.action==="add-cart")addCart(id);
+      if(action.dataset.action==="remove-cart"){
+        state.cart=state.cart.filter(item=>item.id!==id);
+        persist();renderCart();toast("Removed from cart preview.");
+      }
+    }
+    if(event.target.closest("[data-close]"))closeDrawers();
+    if(event.target.closest("[data-modal-close]"))closeModal();
+    if(event.target.id==="overlay"){closeDrawers();closeModal();}
+    if(!event.target.closest(".main-navigation")&&!event.target.closest("#category-toggle")){
+      $("#mega-menu").hidden=true;
+      $("#category-toggle").setAttribute("aria-expanded","false");
+    }
   });
 
-  $("#newsletter-form")?.addEventListener("submit", event => {
+  document.addEventListener("keydown",event=>{
+    if(event.key==="Escape"){
+      closeDrawers();closeModal();
+      $("#mega-menu").hidden=true;
+      $("#category-toggle").setAttribute("aria-expanded","false");
+      $("#mobile-navigation").hidden=true;
+      $("#mobile-menu-button").setAttribute("aria-expanded","false");
+    }
+    const card=event.target.closest?.(".product-card__image[data-action='details']");
+    if(card&&(event.key==="Enter"||event.key===" ")){event.preventDefault();openProduct(card.dataset.id);}
+  });
+
+  $$(".shelf-tabs button[data-shelf]").forEach(button=>button.addEventListener("click",()=>{
+    state.activeTrending=button.dataset.shelf;
+    $$(".shelf-tabs button[data-shelf]").forEach(b=>{
+      const active=b===button;b.classList.toggle("is-active",active);b.setAttribute("aria-selected",String(active));
+    });
+    const labels={panjabi:"Panjabi",ethnic:"Ethnic Wear",menswear:"Mens Top Wear",womenswear:"Womens Top Wear"};
+    $("#trending-see-label").textContent=labels[state.activeTrending];
+    if(!state.search)renderShelf("#trending-products",shelves[state.activeTrending]);
+  }));
+
+  $$(".shelf-tabs button[data-accessory]").forEach(button=>button.addEventListener("click",()=>{
+    state.activeAccessory=button.dataset.accessory;
+    $$(".shelf-tabs button[data-accessory]").forEach(b=>{
+      const active=b===button;b.classList.toggle("is-active",active);b.setAttribute("aria-selected",String(active));
+    });
+    const labels={wallets:"Mens Wallet",belts:"Mens Belt",caps:"Caps",all:"All Accessories"};
+    $("#accessory-see-label").textContent=labels[state.activeAccessory];
+    if(!state.search)renderShelf("#accessory-products",shelves[state.activeAccessory]);
+  }));
+
+  const search=$("#site-search");
+  $("#search-form").addEventListener("submit",event=>{
     event.preventDefault();
-    const input = $("#newsletter-email");
-    const note = $("#newsletter-note");
-    if (!input || !input.checkValidity()) {
-      input?.reportValidity();
-      return;
-    }
-    try {
-      const emails = readStore("novrielle-preview-interest", []);
-      const email = input.value.trim().toLowerCase();
-      if (!emails.includes(email)) emails.push(email);
-      localStorage.setItem("novrielle-preview-interest", JSON.stringify(emails));
-      input.value = "";
-      if (note) note.textContent = "Saved in this browser preview only. No email has been sent to NOVRIELLE.";
-      showToast("Thank you. Your preview interest has been saved in this browser.");
-    } catch {
-      showToast("This browser could not save your preview interest.");
-    }
+    state.search=search.value.trim();
+    renderAll();
+    $("#new-collection").scrollIntoView({behavior:"smooth",block:"start"});
   });
+  search.addEventListener("input",()=>{
+    state.search=search.value.trim();
+    renderAll();
+  });
+  $("#search-clear").addEventListener("click",()=>{
+    search.value="";state.search="";renderAll();$("#search-clear").hidden=true;
+  });
+  search.addEventListener("input",()=>$("#search-clear").hidden=!search.value);
 
-  $("#current-year").textContent = String(new Date().getFullYear());
-  renderProductLists();
+  $("#checkout-preview").addEventListener("click",()=>toast("Checkout is not connected yet. Official pricing, delivery and secure order processing are still being prepared."));
+  $("#current-year").textContent=String(new Date().getFullYear());
+
+  renderAll();
   renderCart();
   renderWishlist();
 })();
