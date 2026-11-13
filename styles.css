@@ -757,3 +757,31 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
     margin-top:7px;
   }
 }
+
+
+/* NOVRIELLE responsive content rails v2 — one alignment system for hero and all homepage sections. */
+:root{
+  --container:min(1320px,calc(100% - 64px));
+}
+@media(max-width:1200px){
+  :root{--container:calc(100% - 40px)}
+}
+@media(max-width:900px){
+  :root{--container:calc(100% - 40px)}
+}
+@media(max-width:650px){
+  :root{--container:calc(100% - 28px)}
+}
+.hero-section{
+  width:var(--container);
+  max-width:1320px;
+  margin:10px auto 0;
+  padding:0;
+}
+.hero-slider{width:100%}
+@media(max-width:900px){
+  .hero-section{width:var(--container);margin-top:8px}
+}
+@media(max-width:650px){
+  .hero-section{width:var(--container);margin-top:7px}
+}
