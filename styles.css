@@ -843,3 +843,174 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
 @media(max-width:650px){
   .hero-section{width:var(--container);margin-top:7px}
 }
+
+
+/* NOVRIELLE editorial spacing v5 — wider hero, contained product shelves, tighter category rhythm. */
+:root{
+  --container:min(1550px,calc(100% - 88px));
+}
+@media(max-width:1200px){
+  :root{--container:calc(100% - 56px)}
+}
+@media(max-width:900px){
+  :root{--container:calc(100% - 44px)}
+}
+@media(max-width:650px){
+  :root{--container:calc(100% - 28px)}
+}
+
+/* Keep the hero visually dominant while giving the lower page a calmer content box. */
+.hero-section{
+  width:min(1680px,calc(100% - 56px));
+  max-width:1680px;
+  margin:9px auto 0;
+  padding:0;
+}
+.hero-slider{
+  width:100%;
+  height:clamp(290px,27vw,430px);
+  min-height:0;
+  border-radius:10px;
+}
+@media(max-width:1200px){
+  .hero-section{width:calc(100% - 40px)}
+  .hero-slider{height:clamp(270px,32vw,370px)}
+}
+@media(max-width:900px){
+  .hero-section{width:calc(100% - 36px);margin-top:8px}
+  .hero-slider{height:clamp(250px,35vw,330px)}
+}
+@media(max-width:650px){
+  .hero-section{width:calc(100% - 20px);margin-top:7px}
+  .hero-slider{height:218px;min-height:218px;border-radius:7px}
+}
+
+/* The category shelf is a compact 12-item rhythm instead of widely spaced circles. */
+.popular-section{
+  padding-top:25px;
+  padding-bottom:19px;
+}
+.popular-section .section-title-row{
+  margin-bottom:16px;
+}
+.popular-grid{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  align-items:start;
+  justify-content:stretch;
+  gap:9px;
+  overflow:visible;
+  padding:4px 0 8px;
+}
+.popular-card{
+  width:100%;
+  min-width:0;
+  max-width:120px;
+  flex:none;
+  gap:7px;
+}
+.popular-card__image{
+  width:clamp(76px,6.5vw,104px);
+  height:clamp(76px,6.5vw,104px);
+  border-width:2px;
+}
+.popular-card__label{
+  min-height:31px;
+  padding:0 1px;
+  font-size:9px;
+  line-height:1.28;
+  letter-spacing:0;
+}
+@media(max-width:1200px){
+  .popular-grid{
+    display:flex;
+    justify-content:flex-start;
+    gap:13px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:4px 1px 9px;
+  }
+  .popular-card{
+    flex:0 0 100px;
+    min-width:100px;
+    max-width:100px;
+  }
+  .popular-card__image{width:90px;height:90px}
+}
+@media(max-width:650px){
+  .popular-section{padding-top:21px;padding-bottom:14px}
+  .popular-section .section-title-row{margin-bottom:12px}
+  .popular-grid{gap:10px;padding-bottom:7px}
+  .popular-card{
+    flex:0 0 84px;
+    min-width:84px;
+    max-width:84px;
+    gap:6px;
+  }
+  .popular-card__image{width:76px;height:76px;border-width:2px}
+  .popular-card__label{font-size:8px;min-height:27px;line-height:1.25}
+}
+
+/* Tighter campaign proportions and slightly shorter product photography. */
+.campaign-grid-section{
+  grid-template-rows:clamp(180px,16vw,245px) clamp(115px,10vw,150px);
+  gap:11px;
+  padding-top:21px;
+  padding-bottom:10px;
+}
+.product-grid{
+  width:100%;
+  max-width:1450px;
+  margin-inline:auto;
+  gap:22px 16px;
+}
+.product-card__image{aspect-ratio:.84}
+.product-card__body{padding-top:8px}
+.mid-banners{
+  max-width:1550px;
+  margin-inline:auto;
+  gap:11px;
+  padding-top:24px;
+  padding-bottom:8px;
+}
+.mid-banner{height:190px}
+.section-block--soft{
+  margin-top:27px;
+  padding-top:32px;
+  padding-bottom:36px;
+}
+.marketplace-banner{
+  max-width:1450px;
+  min-height:270px;
+  margin-top:38px;
+  margin-bottom:38px;
+}
+.marketplace-banner__image{min-height:270px}
+@media(max-width:900px){
+  .campaign-grid-section{
+    grid-template-rows:180px 128px;
+    gap:9px;
+    padding-top:17px;
+  }
+  .product-grid{gap:19px 13px}
+  .mid-banner{height:166px}
+  .section-block--soft{margin-top:22px;padding-top:26px;padding-bottom:30px}
+  .marketplace-banner{min-height:0;margin-top:28px;margin-bottom:30px}
+  .marketplace-banner__image{min-height:230px}
+}
+@media(max-width:650px){
+  .campaign-grid-section{
+    grid-template-rows:142px 142px 104px 104px;
+    gap:8px;
+    padding-top:15px;
+    padding-bottom:7px;
+  }
+  .product-grid{gap:17px 9px}
+  .product-card__image{aspect-ratio:.84}
+  .mid-banners{gap:8px;padding-top:17px;padding-bottom:5px}
+  .mid-banner{height:139px}
+  .mid-banner:last-child{height:145px}
+  .section-block--soft{margin-top:18px;padding-top:23px;padding-bottom:26px}
+  .marketplace-banner{margin-top:24px;margin-bottom:25px}
+  .marketplace-banner__image{height:185px;min-height:185px}
+}
