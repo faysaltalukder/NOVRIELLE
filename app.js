@@ -120,7 +120,7 @@
     const node = $(target);
     if (!node) return;
     const term = state.search.trim().toLowerCase();
-    let list = ids.map(id => productMap.get(id)).filter(Boolean);
+    let list = [...new Map(ids.map(id => productMap.get(id)).filter(Boolean).map(product => [product.id, product])).values()];
     if (term) {
       list = products.filter(p => [p.name,p.category,p.group,p.alt].some(v => v.toLowerCase().includes(term)));
       const title = $(".section-title-row h2", $("#new-collection"));
@@ -235,7 +235,10 @@
         <button type="button" class="dark-button dark-button--full" data-action="add-cart" data-id="${p.id}">ADD TO PREVIEW CART</button>
       </div>
     </div>`;
-    closeDrawers();
+    $(".drawer.is-open").forEach(drawer=>{
+      drawer.classList.remove("is-open");
+      drawer.setAttribute("aria-hidden","true");
+    });
     $("#overlay").hidden=false;
     requestAnimationFrame(()=>$("#overlay").classList.add("is-visible"));
     $("#product-modal").classList.add("is-open");
