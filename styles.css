@@ -561,3 +561,14 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
   text-shadow:none;
   opacity:1;
 }
+
+
+/* Crop the Saree category portrait to its model, away from source campaign lettering. */
+.popular-card--saree .popular-card__image img{
+  object-position:50% 0%;
+  transform:scale(2.02);
+  transform-origin:50% 0%;
+}
+.popular-card--saree:hover .popular-card__image img{
+  transform:scale(2.08);
+}
