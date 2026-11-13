@@ -594,11 +594,23 @@ The first coding pass should not attempt to build every feature at once. It shou
 
 ### Not yet completed
 
-- Production deployment: ShipStatic's connected Free account has reached its 100-deployment cap. Vercel requires the connected GitHub project to be authorized for the target team before project creation/deployment can proceed.
+- Production deployment: **completed via GitHub Pages** from the `main` branch. The latest Pages build and deployment workflow completed successfully.
 - Product data: real SKU, price, sizes, colors, inventory, and product descriptions still require approval.
 - Backend: independent NOVRIELLE API/database, protected admin, authentication, order persistence and tracking are not yet provisioned.
 - Commercial image-rights clearance is still required before the selected third-party-origin product photography is used for public retail.
 
 ### Next implementation step
 
-Authorize Vercel team access, create the Git-connected Vercel project for `faysaltalukder/NOVRIELLE`, deploy the current `main` commit, and verify the production URL and asset loading. Then continue with the independent catalogue and order backend.
+Continue with the independent catalogue and order backend; the public GitHub Pages deployment is already live.
+
+
+### GitHub Pages deployment verification — 13 November 2026
+
+- **Publishing source:** `main` branch, repository root.
+- **Live URL:** https://faysaltalukder.github.io/NOVRIELLE/
+- **Workflow:** `pages build and deployment`
+- **Workflow run:** https://github.com/faysaltalukder/NOVRIELLE/actions/runs/43444013905
+- **Result:** `success` — build, report-build-status, and deploy jobs all completed successfully.
+- **Browser check:** the live page opened at the GitHub Pages URL and displayed the NOVRIELLE page title, header, homepage sections, product catalogue preview, and shopping drawer content.
+
+No Vercel, ShipStatic, or other third-party hosting is required for this static storefront preview.
